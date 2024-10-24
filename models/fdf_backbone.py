@@ -1,7 +1,7 @@
 import math
 import torch
 import torch.nn as nn
-from models.fdf import fdf
+from models.fdf_denoise_network import fdf_denoise_network
 from functools import partial
 
 class moving_avg(nn.Module):
@@ -69,7 +69,7 @@ class Diffusion(nn.Module):
         self.sqrt_recipm1_alphas_cumprod = torch.sqrt(1. / self.alphas_cumprod - 1)
         self.gamma = torch.cumprod(self.alpha, dim=0).to(self.device)
         
-        self.denoise_net = fdf(feature_dim, seq_len, pred_len, device, MLP_hidden_dim, emb_dim, patch_size)
+        self.denoise_net = fdf_denoise_network(feature_dim, seq_len, pred_len, device, MLP_hidden_dim, emb_dim, patch_size)
     
     def _cosine_beta_schedule(self, s=0.008):
         steps = self.time_steps + 1
