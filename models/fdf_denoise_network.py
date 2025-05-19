@@ -147,6 +147,7 @@ def modulate(x, shift, scale):
     
 
 class fdf_denoise_network(nn.Module):
+    
     def __init__(
         self,
         n_feat,
