@@ -165,6 +165,7 @@ class Diffusion(nn.Module):
         return denoise_series
 
 class MultiLinearModel(nn.Module):
+    
     def __init__(self, seq_len, pred_len, num_loops=2):
         super(MultiLinearModel, self).__init__()
 
