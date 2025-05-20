@@ -1,9 +1,9 @@
-# FDF: Flexible Decoupled Framework for Time Series Forecasting with Conditional Denoising and Polynomial Modeling
+# Conditional Denoising Meets Polynomial Modeling: A Flexible Decoupled Framework for Time Series Forecasting
 
 [![GitHub Stars](https://img.shields.io/github/stars/zjt-gpu/FDF.svg)](https://github.com/zjt-gpu/FDF/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/zjt-gpu/FDF.svg)](https://github.com/zjt-gpu/FDF/network/members)
 
-> **Abstract:** Time series forecasting is vital in numerous web applications, influencing critical decision-making across industries. While diffusion models have recently gained increasing popularity for this task, we argue they suffer from a significant drawback: indiscriminate noise addition to the original time series followed by denoising, which can obscure underlying dynamic evolving trend and complicate forecasting. To address this limitation, we propose a novel flexible decoupled framework (FDF) that learns high-quality time series representations for enhanced forecasting performance. A key characteristic of our approach leverages the inherent inductive bias of time series data of its decomposed trend and seasonal components, each modeled separately to enable decoupled analysis and modeling. Specifically, we propose an innovative Conditional Denoising Seasonal Module (CDSM) within the diffusion model, which leverages statistical information from the historical window to conditionally model the complex seasonal component. Notably, we incorporate a Polynomial Trend Module (PTM) to effectively capture the smooth trend component, thereby enhancing the model's ability to represent temporal dependencies. Extensive experiments validate the effectiveness of our framework, demonstrating superior performance over existing methods and highlighting its flexibility in time series forecasting.
+> **Abstract:** Time series forecasting models are becoming increasingly prevalent due to their critical role in decision-making across various domains. However, most existing approaches represent the coupled temporal patterns, often neglecting the distinction between its specific components. In particular, fluctuating patterns and smooth trends within time series exhibit distinct characteristics. In this work, to model complicated temporal patterns, we propose a Conditional Denoising Polynomial Modeling (CDPM) framework, where probabilistic diffusion models and deterministic linear models are trained end-to-end. Instead of modeling the coupled time series, CDPM decomposes it into trend and seasonal components for modeling them separately. To capture the fluctuating seasonal component, we employ a probabilistic diffusion model based on statistical properties from the historical window. For the smooth trend component, a module is proposed to enhance linear models by incorporating historical dependencies, thereby preserving underlying trends and mitigating noise distortion. Extensive experiments conducted on six benchmarks demonstrate the effectiveness of our framework, highlighting the potential of combining probabilistic and deterministic models.
 ![](picture/model.png)
 
 # Main Results
@@ -66,13 +66,10 @@ We extend our sincere appreciation to the following GitHub repositories for prov
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```bibtex
-@misc{zhang2024fdf,
+@article{zhang2024fdf,
   title={FDF: Flexible Decoupled Framework for Time Series Forecasting with Conditional Denoising and Polynomial Modeling},
   author={Zhang, Jintao and Cheng, Mingyue and Tao, Xiaoyu and Liu, Zhiding and Wang, Daoyu},
-  year={2024},
-  eprint={2410.13253},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  url={https://arxiv.org/abs/2410.13253}, 
+  journal={arXiv preprint arXiv:2410.13253},
+  year={2024}
 }
 ```
