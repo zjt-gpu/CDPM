@@ -38,7 +38,7 @@ def organize_file_structure(_args: argparse.Namespace):
 
 
 def get_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="FDF Args")
+    parser = argparse.ArgumentParser(description="CDPM Args")
 
     # basic config
     parser.add_argument("--data_dir", type=str, default="datasets", help="data directory")
@@ -55,7 +55,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument("--feature_dim", type=int, default=7, help="number of features")
 
     #model define
-    parser.add_argument("--model_name", type=str, default="FDF", help="model name")
+    parser.add_argument("--model_name", type=str, default="CDPM", help="model name")
     parser.add_argument("--time_steps", type=int, default=50, help="time steps in diffusion")
     parser.add_argument("--scheduler", type=str, default="cosine", help="scheduler in diffusion")
     parser.add_argument("--MLP_hidden_dim", type=int, default=256, help="MLP hidden dim")
