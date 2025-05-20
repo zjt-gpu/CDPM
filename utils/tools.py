@@ -2,7 +2,6 @@ import torch
 import time
 from argparse import Namespace
 
-
 class EarlyStopping:
     def __init__(self, args: Namespace):
         self.patience = args.patience
