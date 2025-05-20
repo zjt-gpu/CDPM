@@ -11,7 +11,6 @@ from utils.tools import EarlyStopping, EpochTimer
 import time
 from thop import profile
 
-
 @dataclass
 class PerformanceMetrics:
     mse_loss: float = 0.0
