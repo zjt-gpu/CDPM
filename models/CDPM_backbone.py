@@ -1,7 +1,7 @@
 import math
 import torch
 import torch.nn as nn
-from models.fdf_denoise_network import fdf_denoise_network
+from models.CDPM_denoise_network import CDPM_denoise_network
 from functools import partial
 
 class moving_avg(nn.Module):
