@@ -6,7 +6,6 @@ from argparse import Namespace
 from torch.utils.data import Dataset
 from sklearn.preprocessing import StandardScaler
 
-
 class ETThDataset(Dataset):
     def __init__(self, args: Namespace, flag: str = "train"):
 
