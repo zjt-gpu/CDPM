@@ -1,16 +1,16 @@
 import torch
 import torch.nn as nn
 from argparse import Namespace
-from models.fdf_backbone import (
+from models.CDPM_backbone import (
     Diffusion,
     series_decomposition,
     MultiLinearModel
 )
 
 
-class FDF(nn.Module):
+class CDPM(nn.Module):
     def __init__(self, args: Namespace):
-        super(FDF, self).__init__()
+        super(CDPM, self).__init__()
 
         self.decom = series_decomposition(kernel_size = 5)
         self.input_len = args.input_len
