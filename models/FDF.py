@@ -7,6 +7,7 @@ from models.fdf_backbone import (
     MultiLinearModel
 )
 
+
 class FDF(nn.Module):
     def __init__(self, args: Namespace):
         super(FDF, self).__init__()
