@@ -146,7 +146,7 @@ def modulate(x, shift, scale):
     return x * (1 + scale.unsqueeze(1)) + shift.unsqueeze(1)
     
 
-class fdf_denoise_network(nn.Module):
+class CDPM_denoise_network(nn.Module):
     
     def __init__(
         self,
