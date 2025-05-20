@@ -66,10 +66,13 @@ We extend our sincere appreciation to the following GitHub repositories for prov
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```bibtex
-@article{zhang2024fdf,
-  title={FDF: Flexible Decoupled Framework for Time Series Forecasting with Conditional Denoising and Polynomial Modeling},
-  author={Zhang, Jintao and Cheng, Mingyue and Tao, Xiaoyu and Liu, Zhiding and Wang, Daoyu},
-  journal={arXiv preprint arXiv:2410.13253},
-  year={2024}
+@misc{zhang2025conditionaldenoisingmeetspolynomial,
+      title={Conditional Denoising Meets Polynomial Modeling: A Flexible Decoupled Framework for Time Series Forecasting}, 
+      author={Jintao Zhang and Mingyue Cheng and Xiaoyu Tao and Zhiding Liu and Daoyu Wang},
+      year={2025},
+      eprint={2410.13253},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2410.13253}, 
 }
 ```
