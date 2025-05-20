@@ -2,7 +2,7 @@ import torch
 from argparse import Namespace
 from args import get_args
 from data_provider.data_factory import load_data
-from models.FDF import FDF
+from models.CDPM import CDPM
 from exp.train import ModelTrainer
 import os
 
